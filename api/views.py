@@ -19,7 +19,7 @@ class BuyViewSet(viewsets.ViewSet):
         item = get_object_or_404(queryset, pk=pk)
         id_stripe = stripe.Product.create(name=item.name)
         stripe.Price.create(
-            unit_amount=item.price * 100,
+            unit_amount=item.price,
             currency=item.currency,
             recurring={"interval": "month"},
             product=id_stripe,
