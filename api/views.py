@@ -31,7 +31,7 @@ class BuyViewSet(viewsets.ViewSet):
                     'product_data': {
                         'name': item.name,
                     },
-                    'unit_amount': item.price * 100,
+                    'unit_amount': item.price,
                 },
                 'quantity': 1,
             }],
