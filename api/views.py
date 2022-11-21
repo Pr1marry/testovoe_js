@@ -40,7 +40,7 @@ class BuyViewSet(viewsets.ViewSet):
             cancel_url='http://localhost:8000/cancel',
         )
 
-        return HttpResponse(session)
+        return Response(session.id)
 
 
 class ItemViewSet(viewsets.ViewSet):
